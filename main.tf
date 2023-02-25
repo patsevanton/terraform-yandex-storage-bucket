@@ -5,7 +5,6 @@ resource "yandex_iam_service_account_static_access_key" "sa-storage-admin-static
 
 ## Use keys to create bucket
 resource "yandex_storage_bucket" "this" {
-  description   = var.description
   access_key    = yandex_iam_service_account_static_access_key.sa-storage-admin-static-key.access_key
   secret_key    = yandex_iam_service_account_static_access_key.sa-storage-admin-static-key.secret_key
   bucket        = var.bucket
