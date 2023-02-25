@@ -9,3 +9,7 @@ variable "bucket" {
 variable "description" {
   type = string
 }
+
+variable "service_account_name" {
+  type = string
+}
