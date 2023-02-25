@@ -10,18 +10,3 @@ resource "yandex_storage_bucket" "this" {
   bucket        = var.bucket
   force_destroy = true
 }
-
-output "yandex_storage_bucket_loki_access_key" {
-  value     = yandex_storage_bucket.this.access_key
-  sensitive = true
-}
-
-output "yandex_storage_bucket_loki_secret_key" {
-  value     = yandex_storage_bucket.this.secret_key
-  sensitive = true
-}
-
-output "yandex_storage_bucket_loki_bucket" {
-  value     = yandex_storage_bucket.this.bucket
-  sensitive = true
-}
